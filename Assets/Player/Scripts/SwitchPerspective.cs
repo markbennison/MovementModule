@@ -62,4 +62,21 @@ public class SwitchPerspective : MonoBehaviour
         DisableAllContainers();
         ActivatePerspective(perspective);
     }
+
+    public Perspective GetPerspective()
+    {
+        return perspective;
+    }
+
+    public void SetPerspective(Perspective perspective)
+    {
+        if(this.perspective == perspective)
+        {
+            return;
+        }
+
+        this.perspective = perspective;
+
+        PerspectiveSwitch(perspective);
+    }
 }
