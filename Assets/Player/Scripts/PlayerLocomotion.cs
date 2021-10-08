@@ -22,8 +22,7 @@ public class PlayerLocomotion : MonoBehaviour
     {
         Cursor.visible = false;
         characterController = GetComponent<CharacterController>();
-        playerContainer = gameObject.transform.Find("Container3P");
-        cameraContainer = playerContainer.transform.Find("Camera3PContainer");
+        SetCurrentCamera();
     }
 
     void Update()
@@ -32,6 +31,22 @@ public class PlayerLocomotion : MonoBehaviour
         RotateAndLook();
 
         PerspectiveCheck();
+    }
+
+    void SetCurrentCamera()
+	{
+        SwitchPerspective switchPerspective = GetComponent<SwitchPerspective>();
+        if (switchPerspective.GetPerspective() == SwitchPerspective.Perspective.First)
+        {
+            playerContainer = gameObject.transform.Find("Container1P");
+            cameraContainer = playerContainer.transform.Find("Camera1PContainer");
+        }
+        else
+        {
+            playerContainer = gameObject.transform.Find("Container3P");
+            cameraContainer = playerContainer.transform.Find("Camera3PContainer");
+        }
+
     }
 
     void Locomotion()
@@ -90,6 +105,8 @@ public class PlayerLocomotion : MonoBehaviour
                 {
                     switchPerspective.SetPerspective(SwitchPerspective.Perspective.First);
                 }
+
+                SetCurrentCamera();
             }
         }
     }
