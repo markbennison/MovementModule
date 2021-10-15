@@ -8,7 +8,7 @@ public class Interactor : MonoBehaviour
 	LayerMask layerMask;
 
 	[SerializeField]
-	private float maxDistanceFromCameraToObjects = 10f;
+	private float maxDistanceFromCameraToObjects = 100f;
 
 	[SerializeField]
 	private float maxInteractableDistance = 3f;
@@ -31,13 +31,15 @@ public class Interactor : MonoBehaviour
 	{
 		actorCamera = Camera.main.transform;
 		Debug.Log("Live Camera: " + actorCamera.name);
-		Debug.Log("layer mask " + layerMask.value.ToString());
 		Ray ray = new Ray(actorCamera.position, actorCamera.forward);
 		RaycastHit raycastHit;
 
+		//Debug.DrawRay(ray.origin, ray.direction*10f, Color.magenta, 2f);
+
 		//if (Physics.Raycast(ray, out raycastHit, maxDistanceFromCameraToObjects, layerMask))
-		if (Physics.Raycast(ray, out raycastHit, maxDistanceFromCameraToObjects))
+		if (Physics.Raycast(ray, out raycastHit, maxDistanceFromCameraToObjects, layerMask))
 		{
+			Debug.Log("layer mask " + layerMask.value.ToString());
 			if (raycastHit.transform != null)
 			{
 				distanceFromActor = Vector3.Distance(transform.position, raycastHit.transform.position);
@@ -51,6 +53,10 @@ public class Interactor : MonoBehaviour
 					}
 				}
 			}
+		}
+		else
+		{
+			Debug.Log("NO RAYCAST");
 		}
 	}
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6628009959514219097}
   - component: {fileID: 6628009959514219099}
   - component: {fileID: 6628009959514219098}
-  m_Layer: 6
+  m_Layer: 21
   m_Name: Model3P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6628009960069481112}
-  m_Layer: 6
+  m_Layer: 21
   m_Name: Camera3PContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 6628009960146967925}
   - component: {fileID: 6628009960146967927}
   - component: {fileID: 6628009960146967926}
-  m_Layer: 6
+  m_Layer: 21
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 6628009960547531646}
   - component: {fileID: 6628009960547531640}
   - component: {fileID: 6628009960547531647}
-  m_Layer: 6
+  m_Layer: 21
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6628009960649810609}
-  m_Layer: 6
+  m_Layer: 21
   m_Name: Camera1PContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6628009960720084611}
-  m_Layer: 6
+  m_Layer: 21
   m_Name: Container1P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6628009960913245252}
-  m_Layer: 6
+  m_Layer: 21
   m_Name: Container3P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 6628009960978547614}
   - component: {fileID: 6628009960978547608}
   - component: {fileID: 6628009960978547613}
-  m_Layer: 6
+  m_Layer: 21
   m_Name: PlayerObject
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 6628009961056117614}
   - component: {fileID: 6628009961056117608}
   - component: {fileID: 6628009961056117615}
-  m_Layer: 6
+  m_Layer: 21
   m_Name: Model1P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
