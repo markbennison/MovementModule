@@ -17,8 +17,39 @@ public class Item : MonoBehaviour
 
     public bool isStorable = false; // if false, item will be used on pickup
     public bool isConsumable = true; // if true, item will be destroyed (or quantity decremented if >1) when used
+    public bool isCollideToPickup = false; // if true, collider.isTrigger == true
 
-    public void Interact()
+	private void Start()
+	{
+        InitialiseCollideToPickup();
+
+    }
+
+    void InitialiseCollideToPickup()
+    {
+        Collider collider = GetComponent<Collider>();
+        if (collider != null)
+        {
+            if (isCollideToPickup)
+            {
+                collider.isTrigger = true;
+            }
+            else
+            {
+                collider.isTrigger = false;
+            }
+        }
+    }
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if(other.tag == "Player")
+		{
+            Interact();
+        }
+	}
+
+	public void Interact()
     {
         Debug.Log("Picked up " + transform.name);
 
